@@ -1,4 +1,4 @@
-fn fn main() {
+fn main() {
 	
 	println!(); // prints just a
 
