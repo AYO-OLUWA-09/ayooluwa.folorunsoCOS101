@@ -10,3 +10,4 @@ fn main() {
 	println!("Simple Intrest is {}", si);
 
 }
+
