@@ -14,7 +14,7 @@ fn main() {
     let selected:u32 = input1.trim().parse().expect("Invalid input");
 
 
-    let result match; selected {
+    let result = match selected {
         1 => a_trapezium(),
         2 => a_rhombus(),
         3 => a_parallelogram(),
@@ -29,7 +29,7 @@ fn main() {
 }
 
 
-fn a_trapezium(_:f64) -> f64 {
+fn a_trapezium(area_t:f64) -> f64 {
     println!("Enter height: ");
     let height = String::new();
     io::stdin().read_line(&mut height).expect("Not a valid String");
@@ -49,7 +49,7 @@ fn a_trapezium(_:f64) -> f64 {
     println!("Area of Trapezium: {}",area_t);
 }
 
-fn a_rhombus(_: f64) ->f64 {
+fn a_rhombus(area_r: f64) ->f64 {
     println!("Enter diagonal1:");
     let mut d1 = String::new();
     io::stdin().read_line(&mut d1).expect("Not a valid String");
@@ -64,7 +64,7 @@ fn a_rhombus(_: f64) ->f64 {
     println!("Area of Rhombus: {}",area_r);
 }
 
-fn a_parallelogram(_: f64) ->f64 {
+fn a_parallelogram(area_p: f64) ->f64 {
      println!("Enter base:");
     let mut base = String::new();
     io::stdin().read_line(&mut base).expect("Not a valid String");
@@ -79,7 +79,7 @@ fn a_parallelogram(_: f64) ->f64 {
     println!("Area of a Parallelogram: {}",area_p);
 }
 
-fn a_cube(_: f64) ->f64 {
+fn a_cube(area_c: f64) ->f64 {
      println!("Enter sidee:");
     let mut side = String::new();
     io::stdin().read_line(&mut side).expect("Not a valid String");
@@ -90,7 +90,7 @@ fn a_cube(_: f64) ->f64 {
 return side
 }
 
-fn v_cylinder(_:f64) ->f64 {
+fn v_cylinder(v_c:f64) ->f64 {
      println!("Enter radius:");
     let mut radius = String::new();
     io::stdin().read_line(&mut radius).expect("Not a valid String");
@@ -101,5 +101,14 @@ fn v_cylinder(_:f64) ->f64 {
     io::stdin().read_line(&mut height).expect("Not a valid String");
     let height:f64 = height.trim().parse().expect("Invalid String");
 
-    std::f64::consts::PI * radius *radius *height
+    const PI:f64 = 3.142;
+
+    let v_c:F64 = PI * radius * radius * height;
+    println!("Volume of a cylider: {}",v_c);
+
+
+
+
+
+
 }
