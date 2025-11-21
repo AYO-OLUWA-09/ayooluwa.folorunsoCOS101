@@ -45,16 +45,16 @@ fn main() {
  // getting input
 
  println!("Enter occupation (Office Administrator, Academic, Lawyer, Teacher");
- let mut input1:Str = String::new();
- io::stdin().read_line(&mut input1).expect("Failed to read input");
- let occupation = input1.trim().parse().expect("Invalid input");
+ let mut occupation_input = String::new();
+ io::stdin().read_line(&mut occupation_input).unwrap();
+ let occupation = occupation_input.trim();
 
 
  // years of experience
  println!("Enter your years of experience");
- let mut input2 = String::new();
- io::stdin().read_line(&mut input2).expect("Failed to read input");
- let years = input2.trim().parse().expect("Invalid input");
+ let mut years_input = String::new();
+ io::stdin().read_line(&mut years_input).expect("Failed to read input");
+ let years:i32 = years_input.trim().parse().expect("Invalid input");
 
 
  // matching levels
@@ -62,7 +62,10 @@ fn main() {
  let mut found = false;
 
   for (occupation, min_years, max_years, level, positions) in &staff_levels {
-        if *occupation == *occupation && years >= *min_years && years <= *max_years {
+        if occupation.to_lowercase() == occupation_input.to_lowercase()
+         && years >= *min_years
+         && years <= *max_years 
+    {
             println!("\nStaff Level: {}", level);
             println!("Possible Positions:");
             for pos in positions {
@@ -71,14 +74,12 @@ fn main() {
             found = true;
             break;
         }
-         if !found {
-        println!("\nNo matching level found for this occupation and years of experience.");
-    }
+        }
 }
 
 
 
-}
+
 
 
 
