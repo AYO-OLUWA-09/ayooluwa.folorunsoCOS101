@@ -1,0 +1,25 @@
+1.
+Names: Aigbogun Alamba Daudu
+Ministry: Internal Affairs
+Geopolitical Zones: South West
+
+2.
+Names: Murtala Afeez Bendu
+Ministry: Justice
+Geopolitical Zones: North East
+
+3.
+Names: Okorocha Calistus Ogbona
+Ministry: Defence
+Geopolitical Zones: South South
+
+4.
+Names: Adewale Jimoh Akanbi
+Ministry: Power & Steel
+Geopolitical Zones: South West
+
+5.
+Names: Osazuwa Faith Etieye
+Ministry: Petroleum
+Geopolitical Zones: South East
+
