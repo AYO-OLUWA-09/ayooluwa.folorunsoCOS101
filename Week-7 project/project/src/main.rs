@@ -1,4 +1,4 @@
-// rust program to compute shapes and solve their areas
+        // rust program to compute shapes and solve their areas
 use std::io;
 
 fn main() {
@@ -14,12 +14,12 @@ fn main() {
     let selected:u32 = input1.trim().parse().expect("Invalid input");
 
 
-    let result = match selected {
-        1 => a_trapezium(),
-        2 => a_rhombus(),
-        3 => a_parallelogram(),
-        4 => a_cube(),
-        5 => v_cylinder(),
+    let result = match selected.to_lowwercase() {
+        a => a_trapezium(),
+        b => a_rhombus(),
+        c => a_parallelogram(),
+        d => a_cube(),
+        e => v_cylinder(f64),
         _ => {
             println!("Invalid choice!");
             return;

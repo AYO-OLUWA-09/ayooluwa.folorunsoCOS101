@@ -18,7 +18,7 @@ let mut input2 = String::new();
 //let input3 = String::new();
 
 println!("Enter your order code,please: ");
-io::stdin().read_line(&mut input1).expect("Not a valid string");
+io::stdin().read_line(&mut input1).unwrap().to_uppercase();
 
 
 println!("Input Quantity: ");
@@ -32,14 +32,14 @@ let price = match input1.as_str() {
     "A" => 2_500,
     "E" => 2_000,
     "W" => 2_500,
-    &_ => todo!(),
+     _ => 
 };
 let mut total:i32 = qantity * price;
 
 // discount
 
 if total > 10_000 
-{
+{'
 
 println!("Hurray, you got a 5% discount");
 
